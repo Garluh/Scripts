@@ -56,7 +56,7 @@ public class Skeleton_footman : MonoBehaviour
         }
         else if (target == null)
         {
-            MoveToHome(startPoint.transform.position);
+            MoveToHome();
         }
 
     }
@@ -76,25 +76,26 @@ public class Skeleton_footman : MonoBehaviour
             }
     }
 
-    void MoveToHome(Vector3 target)
+    void MoveToHome()
     {
-        fov.viewAngel = 44;
-        float distance = Vector3.Distance(target, this.transform.position);
-        direction = target - this.transform.position;
-        direction.y = 0;
-        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
-        agent.SetDestination(target);
-        anim.CrossFade(walk_clip.name);
-        if (distance < 2.1f && target == null)
-        {
+        //fov.viewAngel = 44;
+        //float distance = Vector3.Distance(target, this.transform.position);
+        //direction = target - this.transform.position;
+        //direction.y = 0;
+        //this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
+        //agent.SetDestination(target);
+        //anim.CrossFade(walk_clip.name);
+        //if (distance < 2.1f && target == null)
+        //{
             agent.ResetPath();
             anim.CrossFade(idle.name);
-        }
+        //}
     }
 
     void Attack()
     {
-        anim.CrossFade(attack_type[Random.Range(0, attack_type.Length)].name);
+        //anim.CrossFade(attack_type[Random.Range(0, attack_type.Length)].name);
+        anim.CrossFade(attack_type[1].name);
     }
 
 

@@ -28,7 +28,7 @@ public class ImpactManager : MonoBehaviour {
         {
             Debug.Log("Hit Player");
             //Debug.Log((Random.Range(self.GetComponent<EnemyManager>().MinDamage(), self.GetComponent<EnemyManager>().MaxDamage())));
-            //bc.DamageTake((int)(Random.Range(self.GetComponent<EnemyManager>().MinDamage(), self.GetComponent<EnemyManager>().MaxDamage())));
+            bc.DamageTake((int)(Random.Range(self.GetComponent<EnemyManager>().MinDamage(), self.GetComponent<EnemyManager>().MaxDamage())));
         }
 
         if (other.gameObject.tag == "DamageSpell")
